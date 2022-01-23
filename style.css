@@ -42,6 +42,9 @@ html
      height:auto;
      margin:auto;
      position:relative;
+     display:flex;
+     justify-content: center;
+     align-items: center;
 }
 
 img
@@ -63,6 +66,53 @@ img
     align-items:center;
     cursor:pointer;
     position: absolute;
+    transition:color 0.3s ease;
 }
 
+.prev-button
+{
+    left:0;
+}
+
+.next-button
+{
+    right:0;
+}
+
+.prev-button:hover,
+.next-button:hover
+{
+    color:white;
+}
+
+.lines 
+{
+    position: absolute;
+    display:flex;
+    bottom: 10px;
+}
+
+/* ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+linear - specifies a transition effect with the same speed from start to end
+ease-in - specifies a transition effect with a slow start
+ease-out - specifies a transition effect with a slow end
+ease-in-out - specifies a transition effect with a slow start and end */
+.line
+{
+    padding:1.5px 10px;
+    margin:0 3px;
+    background-color:rgba(240,240,255,0.7);
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+}
+
+.line:hover
+{
+    background-color:white;
+}
+
+.slider
+{
+    display:none; 
+}
 /* 2:05 */
