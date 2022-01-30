@@ -34,3 +34,10 @@ function auto()
     showSlides(slideIndex+=1);
     setTimeout(auto, 5000);
 }
+
+//preloader
+var preloader=document.getElementById('loading');
+function myFunction()
+{
+    preloader.style.display='none';
+}
