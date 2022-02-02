@@ -1,3 +1,10 @@
+
+    var preloader=document.getElementById('loading');
+    function myFunction()
+    {
+        preloader.style.display='none';
+    }
+
 var slideIndex = 0;
 auto();
 
@@ -35,9 +42,21 @@ function auto()
     setTimeout(auto, 5000);
 }
 
-//preloader
-var preloader=document.getElementById('loading');
-function myFunction()
+//map  
+
+function initMap()
 {
-    preloader.style.display='none';
+  const location ={lat:29.66516977123229, lng:79.71979134683865};
+  const map=new google.maps.Map(document.getElementById('map'),
+  {
+    zoom:13,
+    center:location
+  });
+  //the marker ,positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
 }
+
+

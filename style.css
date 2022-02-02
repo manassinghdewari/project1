@@ -212,3 +212,11 @@ html
     flex-wrap: wrap;
   }
 }
+
+/* maps */
+
+#map
+{
+  height: 500px;
+  width:100%;
+}
