@@ -1,3 +1,10 @@
+:root
+{
+  --primary:#FFCE00;
+  --secondry:#FE4880;
+  --dark:#212121;
+  --light:#F3F3F3;
+}
 *
 {
     margin:0;
@@ -205,6 +212,33 @@ html
 
 }
 
+/* maps */
+#map
+{
+  height: 500px;
+  width:100%; 
+}
+
+/* card */
+
+.card
+{
+  width:400px;
+  height:600px;
+  margin:100px auto 0;
+  border:2px solid red;
+
+}
+
+.card_inner
+{
+  width:100%;
+  height:100%;
+  border:2px solid red;
+  transition:transform 1s;
+}
+/* responsiveess controler */
+
 @media only screen and (max-width:1000px)
 {
   .r1
@@ -213,10 +247,4 @@ html
   }
 }
 
-/* maps */
 
-#map
-{
-  height: 500px;
-  width:100%;
-}
