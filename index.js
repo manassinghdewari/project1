@@ -59,4 +59,13 @@ function initMap()
   });
 }
 
+//script for card
 
+const card=document.querySelector('.card_inner');
+console.log("hello");
+card.addEventListener('click',function(){
+  console.log('hello2');
+  card.classList.toggle("is-flipped");
+})
+
+//14;41
