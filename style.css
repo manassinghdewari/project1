@@ -246,8 +246,71 @@ html
   overflow: hidden;
   backface-visibility:hidden;
   position:absolute;
+  transition:transform .6s linear;
 }
 
+/* The perspective distance used by perspective() 
+is specified by a <length> value, which represents
+ the distance between the user and the z=0 plane, 
+ or by none. The z=0 plane is the plane where everything
+  appears in a 2-dimensional view, or the screen. Negative
+   values are syntax errors. Values smaller than 1px 
+   (including zero) are clamped to 1px. Values other
+    than none cause elements with positive z positions 
+    to appear larger, and elements with negative z positions 
+    to appear smaller. */
+
+ /* example of perspective
+  https://codepen.io/desandro/pen/XqMGRB
+  mainly it gives 3d view
+ */
+.front img 
+{
+  height:100%;
+  transform:perspective(600px) rotateY(0deg);
+}
+
+.back
+{
+  background:#f1f1f1;
+  transform:perspective(600px) rotateY(180deg);
+}
+
+.back-content
+{
+  color:#2c3e50;
+  width:100%;
+  text-align:center;
+}
+.sm
+{
+  margin:20px 0;
+}
+.sm a 
+{
+  display:inline-flex;
+  width:40px;
+  height:50px;
+  justify-content:center;
+  align-items:center;
+  color:#2c3e50;
+  font-size:18px;
+  transition:0.4s;
+  border-radius:20%;
+}
+.sm a:hover
+{
+  background:#2c3e50;
+  color:white;
+}
+.card:hover>.front
+{
+  transform:perspective(600px) rotateY(-180deg);
+}
+.card:hover>.back
+{
+  transform:perspective(600px) rotateY(0deg);
+}
 /* responsiveess controler */
 
 @media only screen and (max-width:1000px)
