@@ -231,13 +231,17 @@ html
 {
   width:100%;
   position:relative;
+  display: flex;
+  justify-content: center;
+  margin:auto;
 }
 .middle
 {
   position:absolute;
-  top:50%;
-  left:50%;   
-  transform:translate(-50%,-50%);
+}
+.middle-back
+{
+  position:absolute;
 }
 .front,.back
 {
@@ -267,6 +271,7 @@ is specified by a <length> value, which represents
 .front img 
 {
   height:100%;
+  width:100%;
   transform:perspective(600px) rotateY(0deg);
 }
 
@@ -274,6 +279,9 @@ is specified by a <length> value, which represents
 {
   background:#f1f1f1;
   transform:perspective(600px) rotateY(180deg);
+  display: flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .back-content
